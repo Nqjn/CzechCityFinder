@@ -30,10 +30,10 @@ public class MapWindow extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        Karlovy = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        Karlovy = new javax.swing.JButton();
         map = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,8 +44,15 @@ public class MapWindow extends javax.swing.JFrame {
         });
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 200, 20));
-        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 140, 30));
+
+        Karlovy.setOpaque(false);
+        Karlovy.setBackground(new java.awt.Color(0,0,0,0));
+        Karlovy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KarlovyActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Karlovy, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 20, 20));
 
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,15 +61,8 @@ public class MapWindow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, -1, -1));
-
-        Karlovy.setBackground(new java.awt.Color(255, 255, 255));
-        Karlovy.setVisible(true);
-        Karlovy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KarlovyActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Karlovy, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 20, 20));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 200, 20));
+        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 140, 30));
 
         map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/map1.jpg"))); // NOI18N
         map.setToolTipText("");
@@ -96,13 +96,23 @@ public class MapWindow extends javax.swing.JFrame {
 
     private void KarlovyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KarlovyActionPerformed
         cont.setAnsw(0);
-                System.out.println(cont.getAnsw());
         
+        if (cont.isCorrect(cont.getAnsw())) {
+            score.setText("correct");
+        } else {
+            score.setText("incorrect");
+
+        }
+        System.out.println(cont.getAnsw());
+
     }//GEN-LAST:event_KarlovyActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        cont.chooseCity();
+        
         name.setText(cont.getCity().get(cont.getrChosen()).toString());
+        System.out.println(cont.getCity().get(cont.getrChosen()).toString());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -110,23 +120,15 @@ public class MapWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
 
 
-
     }//GEN-LAST:event_formMouseClicked
 
     private void mapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mapMouseClicked
         // TODO add your handling code here:
-                System.out.println("loll");
-                
-                
-                System.out.println(cont.isCorrect(cont.getAnsw())+ "loll");
-                
-                
-        if (cont.isCorrect(cont.getAnsw())) {
-            score.setText("correct");
-        } else {
-            score.setText("incorrect");
+        System.out.println("loll");
 
-        }
+        System.out.println(cont.isCorrect(cont.getAnsw()) + "loll");
+
+
     }//GEN-LAST:event_mapMouseClicked
 
     /**

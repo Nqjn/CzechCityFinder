@@ -16,7 +16,7 @@ public class MapController {
     MapModel model = new MapModel();
     
 
-    private void chooseCity() {
+    public void chooseCity() {
         model.setrChosen(rand.nextInt(model.getCities().size()));
 
     }
