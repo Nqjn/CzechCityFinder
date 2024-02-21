@@ -19,6 +19,16 @@ public class MapWindow extends javax.swing.JFrame {
 
     }
 
+    public void log() {
+        if (cont.isCorrect(cont.getAnsw())) {
+            score.setText("correct");
+        } else {
+            score.setText("incorrect");
+
+        }
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +40,15 @@ public class MapWindow extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        Karlovy = new javax.swing.JButton();
+        t8 = new javax.swing.JButton();
+        t7 = new javax.swing.JButton();
+        t6 = new javax.swing.JButton();
+        t5 = new javax.swing.JButton();
+        t4 = new javax.swing.JButton();
+        t3 = new javax.swing.JButton();
+        t2 = new javax.swing.JButton();
+        t1 = new javax.swing.JButton();
+        t0 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
@@ -45,14 +63,95 @@ public class MapWindow extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Karlovy.setOpaque(false);
-        Karlovy.setBackground(new java.awt.Color(0,0,0,0));
-        Karlovy.addActionListener(new java.awt.event.ActionListener() {
+        t0.setOpaque(false);
+        t8.setBackground(new java.awt.Color(0,0,0,0));
+        t8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KarlovyActionPerformed(evt);
+                t8ActionPerformed(evt);
             }
         });
-        jPanel1.add(Karlovy, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 20, 20));
+        jPanel1.add(t8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 10, 20));
+
+        t0.setOpaque(false);
+        t7.setBackground(new java.awt.Color(0,0,0,0));
+        t7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 20, 10));
+
+        t0.setOpaque(false);
+        t6.setBackground(new java.awt.Color(0,0,0,0));
+        t6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 20, 20));
+
+        t0.setOpaque(false);
+        t5.setBackground(new java.awt.Color(0,0,0,0));
+        t5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 20, 20));
+
+        t0.setOpaque(false);
+        t4.setBackground(new java.awt.Color(0,0,0,0));
+        t4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 20, 10));
+
+        t0.setOpaque(false);
+        t3.setBackground(new java.awt.Color(0,0,0,0));
+        t3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 20, 20));
+
+        t0.setOpaque(false);
+        t2.setBackground(new java.awt.Color(0,0,0,0));
+        t2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 20, 10));
+
+        t0.setOpaque(false);
+        t1.setBackground(new java.awt.Color(0,0,0,0));
+        t1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 20, 20));
+
+        t0.setOpaque(false);
+        t0.setBackground(new java.awt.Color(0,0,0,0));
+        t0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t0ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t0, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 20, 20));
 
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,14 +164,14 @@ public class MapWindow extends javax.swing.JFrame {
         jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 140, 30));
 
         map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/map1.jpg"))); // NOI18N
-        map.setToolTipText("");
+        map.setToolTipText(null);
         map.setMinimumSize(new java.awt.Dimension(719, 519));
         map.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mapMouseClicked(evt);
             }
         });
-        jPanel1.add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 740));
+        jPanel1.add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,31 +185,25 @@ public class MapWindow extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void KarlovyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KarlovyActionPerformed
+    private void t0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t0ActionPerformed
         cont.setAnsw(0);
-        
-        if (cont.isCorrect(cont.getAnsw())) {
-            score.setText("correct");
-        } else {
-            score.setText("incorrect");
+        log();
 
-        }
         System.out.println(cont.getAnsw());
 
-    }//GEN-LAST:event_KarlovyActionPerformed
+    }//GEN-LAST:event_t0ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         cont.chooseCity();
-        
+
         name.setText(cont.getCity().get(cont.getrChosen()).toString());
         System.out.println(cont.getCity().get(cont.getrChosen()).toString());
 
@@ -130,6 +223,54 @@ public class MapWindow extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_mapMouseClicked
+
+    private void t1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t1ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(1);
+        log();
+    }//GEN-LAST:event_t1ActionPerformed
+
+    private void t2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t2ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(2);
+        log();
+    }//GEN-LAST:event_t2ActionPerformed
+
+    private void t3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t3ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(3);
+        log();
+    }//GEN-LAST:event_t3ActionPerformed
+
+    private void t4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t4ActionPerformed
+        // TODO add your handling code here:
+         cont.setAnsw(4);
+        log();
+    }//GEN-LAST:event_t4ActionPerformed
+
+    private void t5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t5ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(5);
+        log();
+    }//GEN-LAST:event_t5ActionPerformed
+
+    private void t6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t6ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(6);
+        log();
+    }//GEN-LAST:event_t6ActionPerformed
+
+    private void t7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t7ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(7);
+        log();
+    }//GEN-LAST:event_t7ActionPerformed
+
+    private void t8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t8ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(8);
+        log();
+    }//GEN-LAST:event_t8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,11 +308,19 @@ public class MapWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Karlovy;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel map;
     private javax.swing.JLabel name;
     private javax.swing.JLabel score;
+    private javax.swing.JButton t0;
+    private javax.swing.JButton t1;
+    private javax.swing.JButton t2;
+    private javax.swing.JButton t3;
+    private javax.swing.JButton t4;
+    private javax.swing.JButton t5;
+    private javax.swing.JButton t6;
+    private javax.swing.JButton t7;
+    private javax.swing.JButton t8;
     // End of variables declaration//GEN-END:variables
 }
