@@ -22,8 +22,13 @@ public class MapWindow extends javax.swing.JFrame {
     public void log() {
         if (cont.isCorrect(cont.getAnsw())) {
             score.setText("correct");
+            cont.chooseCity();
+            name.setText(cont.getCity().get(cont.getrChosen()).toString());
+
         } else {
             score.setText("incorrect");
+                    System.out.println(cont.model.getCities().get(cont.getAnsw()));
+
 
         }
 
@@ -76,6 +81,7 @@ public class MapWindow extends javax.swing.JFrame {
         name = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
         map = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -94,7 +100,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t32ActionPerformed(evt);
             }
         });
-        jPanel1.add(t32, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 10, 10));
+        jPanel1.add(t32, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 220, 20, 20));
 
         t0.setOpaque(false);
         t31.setBackground(new java.awt.Color(0,0,0,0));
@@ -104,7 +110,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t31ActionPerformed(evt);
             }
         });
-        jPanel1.add(t31, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 10, 10));
+        jPanel1.add(t31, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 10, 10));
 
         t0.setOpaque(false);
         t30.setBackground(new java.awt.Color(0,0,0,0));
@@ -114,7 +120,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t30ActionPerformed(evt);
             }
         });
-        jPanel1.add(t30, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 10, 10));
+        jPanel1.add(t30, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 10, 10));
 
         t0.setOpaque(false);
         t29.setBackground(new java.awt.Color(0,0,0,0));
@@ -124,7 +130,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t29ActionPerformed(evt);
             }
         });
-        jPanel1.add(t29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 20, 10));
+        jPanel1.add(t29, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 20, 10));
 
         t0.setOpaque(false);
         t28.setBackground(new java.awt.Color(0,0,0,0));
@@ -134,7 +140,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t28ActionPerformed(evt);
             }
         });
-        jPanel1.add(t28, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 20, 10));
+        jPanel1.add(t28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 20, 10));
 
         t0.setOpaque(false);
         t27.setBackground(new java.awt.Color(0,0,0,0));
@@ -144,7 +150,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t27ActionPerformed(evt);
             }
         });
-        jPanel1.add(t27, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 20, 10));
+        jPanel1.add(t27, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 10, 10));
 
         t0.setOpaque(false);
         t26.setBackground(new java.awt.Color(0,0,0,0));
@@ -154,7 +160,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t26ActionPerformed(evt);
             }
         });
-        jPanel1.add(t26, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 220, 20, 10));
+        jPanel1.add(t26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 10, 20));
 
         t0.setOpaque(false);
         t25.setBackground(new java.awt.Color(0,0,0,0));
@@ -436,24 +442,27 @@ public class MapWindow extends javax.swing.JFrame {
         });
         jPanel1.add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 720));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel1.setText("\\");
+            jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 190, -1));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap())
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            );
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void t0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t0ActionPerformed
         cont.setAnsw(0);
@@ -468,6 +477,7 @@ public class MapWindow extends javax.swing.JFrame {
         cont.chooseCity();
 
         name.setText(cont.getCity().get(cont.getrChosen()).toString());
+        score.setText("");
         System.out.println(cont.getCity().get(cont.getrChosen()).toString());
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -483,6 +493,8 @@ public class MapWindow extends javax.swing.JFrame {
         System.out.println("loll");
 
         System.out.println(cont.isCorrect(cont.getAnsw()) + "loll");
+        System.out.println(cont.model.getCities().get(cont.getAnsw()));
+        
 
 
     }//GEN-LAST:event_mapMouseClicked
@@ -507,175 +519,175 @@ public class MapWindow extends javax.swing.JFrame {
 
     private void t4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t4ActionPerformed
         // TODO add your handling code here:
-         cont.setAnsw(4);
+        cont.setAnsw(4);
         log();
     }//GEN-LAST:event_t4ActionPerformed
 
     private void t5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t5ActionPerformed
         // TODO add your handling code here:
-                cont.setAnsw(5);
+        cont.setAnsw(5);
         log();
     }//GEN-LAST:event_t5ActionPerformed
 
     private void t6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t6ActionPerformed
         // TODO add your handling code here:
-                cont.setAnsw(6);
+        cont.setAnsw(6);
         log();
     }//GEN-LAST:event_t6ActionPerformed
 
     private void t7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t7ActionPerformed
         // TODO add your handling code here:
-                cont.setAnsw(7);
+        cont.setAnsw(7);
         log();
     }//GEN-LAST:event_t7ActionPerformed
 
     private void t8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t8ActionPerformed
         // TODO add your handling code here:
-                cont.setAnsw(8);
+        cont.setAnsw(8);
         log();
     }//GEN-LAST:event_t8ActionPerformed
 
     private void t9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t9ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(9);
+        cont.setAnsw(9);
         log();
     }//GEN-LAST:event_t9ActionPerformed
 
     private void t10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t10ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(10);
+        cont.setAnsw(10);
         log();
     }//GEN-LAST:event_t10ActionPerformed
 
     private void t11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t11ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(11);
+        cont.setAnsw(11);
         log();
     }//GEN-LAST:event_t11ActionPerformed
 
     private void t12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t12ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(12);
+        cont.setAnsw(12);
         log();
     }//GEN-LAST:event_t12ActionPerformed
 
     private void t13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t13ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(13);
+        cont.setAnsw(13);
         log();
     }//GEN-LAST:event_t13ActionPerformed
 
     private void t14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t14ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(14);
+        cont.setAnsw(14);
         log();
     }//GEN-LAST:event_t14ActionPerformed
 
     private void t15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t15ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(15);
+        cont.setAnsw(15);
         log();
     }//GEN-LAST:event_t15ActionPerformed
 
     private void t16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t16ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(16);
+        cont.setAnsw(16);
         log();
     }//GEN-LAST:event_t16ActionPerformed
 
     private void t17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t17ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(17);
+        cont.setAnsw(17);
         log();
     }//GEN-LAST:event_t17ActionPerformed
 
     private void t18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t18ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(18);
+        cont.setAnsw(18);
         log();
     }//GEN-LAST:event_t18ActionPerformed
 
     private void t19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t19ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(19);
+        cont.setAnsw(19);
         log();
     }//GEN-LAST:event_t19ActionPerformed
 
     private void t20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t20ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(20);
+        cont.setAnsw(20);
         log();
     }//GEN-LAST:event_t20ActionPerformed
 
     private void t21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t21ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(21);
+        cont.setAnsw(21);
         log();
     }//GEN-LAST:event_t21ActionPerformed
 
     private void t22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t22ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(22);
+        cont.setAnsw(22);
         log();
     }//GEN-LAST:event_t22ActionPerformed
 
     private void t23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t23ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(23);
+        cont.setAnsw(23);
         log();
     }//GEN-LAST:event_t23ActionPerformed
 
     private void t24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t24ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(24);
+        cont.setAnsw(24);
         log();
     }//GEN-LAST:event_t24ActionPerformed
 
     private void t25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t25ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(25);
+        cont.setAnsw(25);
         log();
     }//GEN-LAST:event_t25ActionPerformed
 
-    private void t26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t26ActionPerformed
-        // TODO add your handling code here:
-                        cont.setAnsw(26);
-        log();
-    }//GEN-LAST:event_t26ActionPerformed
-
-    private void t27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t27ActionPerformed
-        // TODO add your handling code here:
-                        cont.setAnsw(27);
-        log();
-    }//GEN-LAST:event_t27ActionPerformed
-
     private void t28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t28ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(28);
+        cont.setAnsw(28);
         log();
     }//GEN-LAST:event_t28ActionPerformed
 
+    private void t27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t27ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(27);
+        log();
+    }//GEN-LAST:event_t27ActionPerformed
+
+    private void t26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t26ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(26);
+        log();
+    }//GEN-LAST:event_t26ActionPerformed
+
     private void t29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t29ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(29);
+        cont.setAnsw(29);
         log();
     }//GEN-LAST:event_t29ActionPerformed
 
     private void t30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t30ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(30);
+        cont.setAnsw(30);
         log();
     }//GEN-LAST:event_t30ActionPerformed
 
     private void t31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t31ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(31);
+        cont.setAnsw(31);
         log();
     }//GEN-LAST:event_t31ActionPerformed
 
     private void t32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t32ActionPerformed
         // TODO add your handling code here:
-                        cont.setAnsw(32);
+        cont.setAnsw(32);
         log();
     }//GEN-LAST:event_t32ActionPerformed
 
@@ -716,6 +728,7 @@ public class MapWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel map;
     private javax.swing.JLabel name;
