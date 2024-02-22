@@ -537,98 +537,146 @@ public class MapWindow extends javax.swing.JFrame {
 
     private void t9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t9ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(9);
+        log();
     }//GEN-LAST:event_t9ActionPerformed
 
     private void t10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t10ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(10);
+        log();
     }//GEN-LAST:event_t10ActionPerformed
 
     private void t11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t11ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(11);
+        log();
     }//GEN-LAST:event_t11ActionPerformed
 
     private void t12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t12ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(12);
+        log();
     }//GEN-LAST:event_t12ActionPerformed
 
     private void t13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t13ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(13);
+        log();
     }//GEN-LAST:event_t13ActionPerformed
 
     private void t14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t14ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(14);
+        log();
     }//GEN-LAST:event_t14ActionPerformed
 
     private void t15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t15ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(15);
+        log();
     }//GEN-LAST:event_t15ActionPerformed
 
     private void t16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t16ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(16);
+        log();
     }//GEN-LAST:event_t16ActionPerformed
 
     private void t17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t17ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(17);
+        log();
     }//GEN-LAST:event_t17ActionPerformed
 
     private void t18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t18ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(18);
+        log();
     }//GEN-LAST:event_t18ActionPerformed
 
     private void t19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t19ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(19);
+        log();
     }//GEN-LAST:event_t19ActionPerformed
 
     private void t20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t20ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(20);
+        log();
     }//GEN-LAST:event_t20ActionPerformed
 
     private void t21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t21ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(21);
+        log();
     }//GEN-LAST:event_t21ActionPerformed
 
     private void t22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t22ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(22);
+        log();
     }//GEN-LAST:event_t22ActionPerformed
 
     private void t23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t23ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(23);
+        log();
     }//GEN-LAST:event_t23ActionPerformed
 
     private void t24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t24ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(24);
+        log();
     }//GEN-LAST:event_t24ActionPerformed
 
     private void t25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t25ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(25);
+        log();
     }//GEN-LAST:event_t25ActionPerformed
 
     private void t26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t26ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(26);
+        log();
     }//GEN-LAST:event_t26ActionPerformed
 
     private void t27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t27ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(27);
+        log();
     }//GEN-LAST:event_t27ActionPerformed
 
     private void t28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t28ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(28);
+        log();
     }//GEN-LAST:event_t28ActionPerformed
 
     private void t29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t29ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(29);
+        log();
     }//GEN-LAST:event_t29ActionPerformed
 
     private void t30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t30ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(30);
+        log();
     }//GEN-LAST:event_t30ActionPerformed
 
     private void t31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t31ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(31);
+        log();
     }//GEN-LAST:event_t31ActionPerformed
 
     private void t32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t32ActionPerformed
         // TODO add your handling code here:
+                        cont.setAnsw(32);
+        log();
     }//GEN-LAST:event_t32ActionPerformed
 
     /**
