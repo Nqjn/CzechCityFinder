@@ -20,8 +20,14 @@ public class MapController {
 
     public void chooseCity() {
  //       model.setrChosen(rand.nextInt(model.getCities().size()));
-
-        model.setrChosen(rand.nextInt(spinner + 1));
+        if(spinner > model.getCities().size()){
+            model.setrChosen(rand.nextInt(model.getCities().size()));
+        
+        }else{
+            model.setrChosen(rand.nextInt(spinner + 1));
+        
+        }
+        
 
     }
 
