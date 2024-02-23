@@ -11,15 +11,25 @@ import java.util.Random;
  * @author PC
  */
 public class MapController {
+    int spinner;
+
 
     Random rand = new Random();
     MapModel model = new MapModel();
     
 
     public void chooseCity() {
-        model.setrChosen(rand.nextInt(model.getCities().size()));
+ //       model.setrChosen(rand.nextInt(model.getCities().size()));
+
+        model.setrChosen(rand.nextInt(spinner + 1));
 
     }
+
+    public void setSpinner(int spinner) {
+        this.spinner = spinner;
+    }
+    
+    
 
     public void setAnsw(int Answ) {
         model.setAnsw(Answ);

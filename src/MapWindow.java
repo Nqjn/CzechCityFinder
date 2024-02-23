@@ -1,3 +1,9 @@
+
+import java.awt.Color;
+import javax.swing.JSpinner;
+
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,6 +14,7 @@
  * @author PC
  */
 public class MapWindow extends javax.swing.JFrame {
+            int count;
 
     MapController cont = new MapController();
 
@@ -20,19 +27,33 @@ public class MapWindow extends javax.swing.JFrame {
     }
 
     public void log() {
+
         if (cont.isCorrect(cont.getAnsw())) {
             score.setText("correct");
+            score.setForeground(Color.green);
+            
+            acc.setText("");
             cont.chooseCity();
             name.setText(cont.getCity().get(cont.getrChosen()).toString());
 
         } else {
             score.setText("incorrect");
+            score.setForeground(Color.red);
+            this.count += 1;
+                    acc.setText((String) cont.model.getCities().get(cont.getAnsw()));
                     System.out.println(cont.model.getCities().get(cont.getAnsw()));
 
 
         }
 
     }
+
+    public int getSpin() {
+        int value = (Integer) spin.getValue();
+        return value;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,6 +65,10 @@ public class MapWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        t36 = new javax.swing.JButton();
+        t35 = new javax.swing.JButton();
+        t34 = new javax.swing.JButton();
+        t33 = new javax.swing.JButton();
         t32 = new javax.swing.JButton();
         t31 = new javax.swing.JButton();
         t30 = new javax.swing.JButton();
@@ -77,11 +102,13 @@ public class MapWindow extends javax.swing.JFrame {
         t2 = new javax.swing.JButton();
         t1 = new javax.swing.JButton();
         t0 = new javax.swing.JButton();
+        spin = new javax.swing.JSpinner();
+        spinbut = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
+        acc = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
         map = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -93,6 +120,46 @@ public class MapWindow extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         t0.setOpaque(false);
+        t36.setBackground(new java.awt.Color(0,0,0,0));
+        t36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t36ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t36, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 20, 20));
+
+        t0.setOpaque(false);
+        t35.setBackground(new java.awt.Color(0,0,0,0));
+        t35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t35ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t35, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 20, 20));
+
+        t0.setOpaque(false);
+        t34.setBackground(new java.awt.Color(0,0,0,0));
+        t34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t34ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 20, 20));
+
+        t0.setOpaque(false);
+        t33.setBackground(new java.awt.Color(0,0,0,0));
+        t33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t33ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t33, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 20, 20));
+
+        t0.setOpaque(false);
         t32.setBackground(new java.awt.Color(0,0,0,0));
         t32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         t32.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +167,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t32ActionPerformed(evt);
             }
         });
-        jPanel1.add(t32, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 220, 20, 20));
+        jPanel1.add(t32, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 20, 20));
 
         t0.setOpaque(false);
         t31.setBackground(new java.awt.Color(0,0,0,0));
@@ -150,7 +217,7 @@ public class MapWindow extends javax.swing.JFrame {
                 t27ActionPerformed(evt);
             }
         });
-        jPanel1.add(t27, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 10, 10));
+        jPanel1.add(t27, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 20, 20));
 
         t0.setOpaque(false);
         t26.setBackground(new java.awt.Color(0,0,0,0));
@@ -422,6 +489,18 @@ public class MapWindow extends javax.swing.JFrame {
         });
         jPanel1.add(t0, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 20, 20));
 
+        spin.setModel(new javax.swing.SpinnerNumberModel(30, 0, 150, 30));
+        jPanel1.add(spin, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, -1, -1));
+
+        spinbut.setFont(new java.awt.Font("SKAUT Bold", 0, 10)); // NOI18N
+        spinbut.setText("ok");
+        spinbut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spinbutActionPerformed(evt);
+            }
+        });
+        jPanel1.add(spinbut, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 570, 50, -1));
+
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -429,7 +508,16 @@ public class MapWindow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, -1, -1));
+
+        name.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 200, 20));
+
+        acc.setFont(new java.awt.Font("SKAUT Bold", 0, 18)); // NOI18N
+        acc.setForeground(new java.awt.Color(204, 0, 0));
+        jPanel1.add(acc, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 330, 30));
+
+        score.setFont(new java.awt.Font("SKAUT Bold", 0, 18)); // NOI18N
+        score.setForeground(new java.awt.Color(0, 255, 0));
         jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 140, 30));
 
         map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/map1.jpg"))); // NOI18N
@@ -442,27 +530,24 @@ public class MapWindow extends javax.swing.JFrame {
         });
         jPanel1.add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 720));
 
-        jLabel1.setText("\\");
-            jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 190, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-            getContentPane().setLayout(layout);
-            layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap())
-            );
-            layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            );
-
-            pack();
-        }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void t0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t0ActionPerformed
         cont.setAnsw(0);
@@ -691,6 +776,36 @@ public class MapWindow extends javax.swing.JFrame {
         log();
     }//GEN-LAST:event_t32ActionPerformed
 
+    private void t33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t33ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(33);
+        log();
+    }//GEN-LAST:event_t33ActionPerformed
+
+    private void t34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t34ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(34);
+        log();
+    }//GEN-LAST:event_t34ActionPerformed
+
+    private void t35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t35ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(35);
+        log();
+    }//GEN-LAST:event_t35ActionPerformed
+
+    private void t36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t36ActionPerformed
+        // TODO add your handling code here:
+                cont.setAnsw(36);
+        log();
+    }//GEN-LAST:event_t36ActionPerformed
+
+    private void spinbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinbutActionPerformed
+        // TODO add your handling code here:
+        cont.setSpinner(getSpin());
+        System.out.println(getSpin());
+    }//GEN-LAST:event_spinbutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -727,12 +842,14 @@ public class MapWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel acc;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel map;
     private javax.swing.JLabel name;
     private javax.swing.JLabel score;
+    private javax.swing.JSpinner spin;
+    private javax.swing.JButton spinbut;
     private javax.swing.JButton t0;
     private javax.swing.JButton t1;
     private javax.swing.JButton t10;
@@ -760,6 +877,10 @@ public class MapWindow extends javax.swing.JFrame {
     private javax.swing.JButton t30;
     private javax.swing.JButton t31;
     private javax.swing.JButton t32;
+    private javax.swing.JButton t33;
+    private javax.swing.JButton t34;
+    private javax.swing.JButton t35;
+    private javax.swing.JButton t36;
     private javax.swing.JButton t4;
     private javax.swing.JButton t5;
     private javax.swing.JButton t6;
