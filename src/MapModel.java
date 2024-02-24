@@ -30,12 +30,12 @@ public class MapModel {
             "Klatovy", "Domažlice", "Rokycany", "Tachov", "Kladno", "Rakovník", "Příbram", "Kralupy n. Vltavou",
             "Mělník", "Neratovice", "Brandýs n. Labem", "Nymburk", "Poděbrady", "Kolín", "Kutná Hora", "Čáslav",
             "Mladá Boleslav", "Benešov", "Vlašim", "Beroun", "Olomouc", "Jeseník", "Šumperk", "Zábřeh", "Mohelnice",
-            "Litovel", "Šternberk", "Prostějov", "Přerov", "Hranice", "Mohelnice", "Ostrava", "Karviná",
+            "Litovel", "Šternberk", "Prostějov", "Přerov", "Hranice", "Ostrava", "Karviná",
             "Opava", "Bohumín", "Havířov", "Český Těšín", "Třinec", "Bruntál", "Krnov", "Frýdek-Místek", "Studénka",
             "Nový Jičín", "Kopřivnice", "Frenštát p.R.", "Zlín", "Rožnov p.R.", "Valašské Meziříčí", "Vsetín", "Holešov",
             "Kroměříž", "Otrokovice", "Luhačovice", "Uherské Hradiště", "Uherský brod",  "Brno", "Boskovice",
             "Blansko", "Tišnov", "Kuřim", "Adamov", "Vyškov", "Slavkov u B.", "Bučovice", "Kyjov", "Veselí n. Moravou",
-            "Hodonín", "Břeclav", "Hustopeče", "Mikulov", "Břeclav", "Znojmo", "Moravský Krumlov", "Ivančice", "Rosice"
+            "Hodonín", "Břeclav", "Hustopeče", "Mikulov", "Znojmo", "Moravský Krumlov", "Ivančice", "Rosice"
         };
 
         // Převod pole na LinkedList
