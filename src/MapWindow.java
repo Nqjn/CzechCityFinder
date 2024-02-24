@@ -65,6 +65,8 @@ public class MapWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        t90 = new javax.swing.JButton();
+        t89 = new javax.swing.JButton();
         t88 = new javax.swing.JButton();
         t87 = new javax.swing.JButton();
         t86 = new javax.swing.JButton();
@@ -170,6 +172,26 @@ public class MapWindow extends javax.swing.JFrame {
         });
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        t0.setOpaque(false);
+        t90.setBackground(new java.awt.Color(0,0,0,0));
+        t90.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t90.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t90ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t90, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 10, 20));
+
+        t0.setOpaque(false);
+        t89.setBackground(new java.awt.Color(0,0,0,0));
+        t89.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        t89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t89ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(t89, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, 20, 20));
 
         t0.setOpaque(false);
         t88.setBackground(new java.awt.Color(0,0,0,0));
@@ -1690,6 +1712,18 @@ public class MapWindow extends javax.swing.JFrame {
         log();
     }//GEN-LAST:event_t88ActionPerformed
 
+    private void t89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t89ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(89);
+        log();
+    }//GEN-LAST:event_t89ActionPerformed
+
+    private void t90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t90ActionPerformed
+        // TODO add your handling code here:
+        cont.setAnsw(90);
+        log();
+    }//GEN-LAST:event_t90ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1822,6 +1856,8 @@ public class MapWindow extends javax.swing.JFrame {
     private javax.swing.JButton t86;
     private javax.swing.JButton t87;
     private javax.swing.JButton t88;
+    private javax.swing.JButton t89;
     private javax.swing.JButton t9;
+    private javax.swing.JButton t90;
     // End of variables declaration//GEN-END:variables
 }
